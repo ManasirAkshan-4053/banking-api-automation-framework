@@ -1,0 +1,23 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "title": "ATM Withdrawal",
+      "description": "Debit 2000",
+      "userId": 101
+    },
+    {
+      "id": "9e06",
+      "title": "Online Transfer",
+      "description": "Credit 5000",
+      "userId": 101
+    },
+    {
+      "id": "1d5d",
+      "title": "Online Transfer",
+      "description": "Credit 5000",
+      "userId": 101
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
