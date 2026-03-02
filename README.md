@@ -84,6 +84,7 @@ utils/ → Config, logging, validation utilities
 ### 1️⃣ Clone Repository
 
 git clone https://github.com/ManasirAkshan-4053/banking-api-automation-framework.git
+
 cd banking-api-automation-framework
 
 ### 2️⃣ Install Dependencies
@@ -213,6 +214,6 @@ It demonstrates capability in transitioning from Manual Testing to Advanced API 
 
 ## 📬 Author
 
-Manasir Akshan Ayubkhan
-Software Test Engineer | Banking & Payments Domain
+Manasir Akshan Ayubkhan,
+Software Test Engineer | Banking & Payments Domain,
 API Automation | CI/CD | Test Architecture
