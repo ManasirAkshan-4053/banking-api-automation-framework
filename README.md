@@ -1,5 +1,7 @@
 # 🏦 Banking API Automation Framework
 
+![CI](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/actions/workflows/ci.yml/badge.svg)
+
 A professional REST API Automation Framework built using Python and Pytest.
 
 ## 🚀 Project Overview
