@@ -1,0 +1,4 @@
+2026-03-02 15:00:14,503 - api.transaction_api - INFO - Creating transaction: Online Transfer
+2026-03-02 15:00:14,556 - api.transaction_api - INFO - Response Status: 201
+2026-03-02 15:00:14,556 - api.transaction_api - INFO - Fetching transaction ID: b681
+2026-03-02 15:00:14,560 - api.transaction_api - INFO - Response Status: 200
