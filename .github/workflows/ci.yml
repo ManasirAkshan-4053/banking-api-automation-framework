@@ -50,6 +50,7 @@ jobs:
 
       - name: Run Tests with Allure
         run: |
+          export ENV=dev
           pytest --alluredir=allure-results
 
       - name: Generate Allure Report

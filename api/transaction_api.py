@@ -1,6 +1,10 @@
 import requests
 from utils.config import BASE_URL
 from utils.logger import get_logger
+from utils.config_loader import load_config
+
+config = load_config()
+BASE_URL = config["base_url"]
 
 logger = get_logger(__name__)
 
