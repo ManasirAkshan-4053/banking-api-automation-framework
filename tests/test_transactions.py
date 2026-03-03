@@ -1,5 +1,9 @@
+from urllib import response
+
 from api.transaction_api import create_transaction, get_transaction
 from utils.validators import validate_status_code, validate_json_key
+from jsonschema import validate
+from schemas.transaction_schema import transaction_schema
 
 def test_create_and_get_transaction():
 
@@ -14,6 +18,7 @@ def test_create_and_get_transaction():
 
     transaction_id = create_response.json()["id"]
     get_response = get_transaction(transaction_id)
+    validate(instance=response.json(), schema=transaction_schema)
 
     validate_status_code(get_response, 200)
     validate_json_key(get_response, "title")
