@@ -8,14 +8,17 @@ BASE_URL = config["base_url"]
 
 logger = get_logger(__name__)
 
-def create_transaction(title, description, user_id):
-    url = f"{BASE_URL}/transactions"
+def create_transaction(amount=None, type=None, description=None, user_id=None, payload=None):
 
-    payload = {
-        "title": title,
-        "description": description,
-        "userId": user_id
-    }
+    if payload is None:
+        payload = {
+            "amount": amount,
+            "type": type,
+            "description": description,
+            "user_id": user_id
+        }
+
+    return requests.post(f"{config['base_url']}/transactions", json=payload)
 
     logger.info(f"Creating transaction: {title}")
     response = requests.post(url, json=payload)

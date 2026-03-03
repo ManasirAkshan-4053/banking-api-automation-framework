@@ -29,6 +29,75 @@
       "title": "Online Transfer",
       "description": "Credit 5000",
       "userId": 101
+    },
+    {
+      "id": "9dae",
+      "title": "Online Transfer",
+      "description": "Credit 5000",
+      "userId": 101
+    },
+    {
+      "id": "1e3d",
+      "amount": 5000,
+      "type": "credit",
+      "description": "Online Transfer",
+      "user_id": 101
+    },
+    {
+      "id": "eb8c",
+      "type": "credit"
+    },
+    {
+      "id": "00bc",
+      "amount": "invalid",
+      "type": "credit"
+    },
+    {
+      "id": "e5a8",
+      "amount": -500,
+      "type": "debit"
+    },
+    {
+      "id": "d39c",
+      "amount": 5000,
+      "type": "credit",
+      "description": "Online Transfer",
+      "user_id": 101
+    },
+    {
+      "id": "0258",
+      "type": "credit"
+    },
+    {
+      "id": "edb4",
+      "amount": "invalid",
+      "type": "credit"
+    },
+    {
+      "id": "1db3",
+      "amount": -500,
+      "type": "debit"
+    },
+    {
+      "id": "4ffb",
+      "amount": 5000,
+      "type": "credit",
+      "description": "Online Transfer",
+      "user_id": 101
+    },
+    {
+      "id": "d931",
+      "type": "credit"
+    },
+    {
+      "id": "39b6",
+      "amount": "invalid",
+      "type": "credit"
+    },
+    {
+      "id": "5071",
+      "amount": -500,
+      "type": "debit"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
