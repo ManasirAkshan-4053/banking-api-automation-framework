@@ -3,10 +3,10 @@
 transaction_schema = {
     "type": "object",
     "properties": {
-        "id": {"type": "number"},
-        "amount": {"type": "number"},
-        "currency": {"type": "string"},
-        "status": {"type": "string"}
+        "id": {"type": "string"},
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "userId": {"type": "number"}
     },
-    "required": ["id", "amount", "currency", "status"]
+    "required": ["id", "title", "description", "userId"]
 }
