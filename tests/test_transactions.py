@@ -18,7 +18,9 @@ def test_create_and_get_transaction():
 
     transaction_id = create_response.json()["id"]
     get_response = get_transaction(transaction_id)
-    validate(instance=response.json(), schema=transaction_schema)
+
+    validate_status_code(get_response, 200)
+    validate(instance=get_response.json(), schema=transaction_schema)
 
     validate_status_code(get_response, 200)
     validate_json_key(get_response, "title")
