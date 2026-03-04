@@ -98,6 +98,27 @@
       "id": "5071",
       "amount": -500,
       "type": "debit"
+    },
+    {
+      "id": "25a1",
+      "amount": 5713,
+      "type": "credit",
+      "description": "Bit close.",
+      "user_id": 463
+    },
+    {
+      "id": "9ff9",
+      "type": "credit"
+    },
+    {
+      "id": "be62",
+      "amount": "invalid",
+      "type": "credit"
+    },
+    {
+      "id": "723e",
+      "amount": -500,
+      "type": "debit"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

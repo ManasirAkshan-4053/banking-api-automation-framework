@@ -2,25 +2,24 @@ from api.transaction_api import create_transaction, get_transaction
 from utils.validators import validate_status_code, validate_json_key
 from jsonschema import validate
 from schemas.transaction_schema import transaction_schema
-
+from utils.data_factory import generate_transaction_payload
+from utils.validators import validate_response_time
 
 def test_create_and_get_transaction():
 
-    # Positive test using standard parameters
-    create_response = create_transaction(
-        amount=5000,
-        type="credit",
-        description="Online Transfer",
-        user_id=101
-    )
+    payload = generate_transaction_payload()
+
+    create_response = create_transaction(payload=payload)
 
     validate_status_code(create_response, 201)
+    validate_response_time(create_response, 2000)  # 2 seconds SLA
     validate_json_key(create_response, "id")
 
     transaction_id = create_response.json()["id"]
     get_response = get_transaction(transaction_id)
 
     validate_status_code(get_response, 200)
+    validate_response_time(get_response, 2000)
     validate(instance=get_response.json(), schema=transaction_schema)
     validate_json_key(get_response, "amount")
 
