@@ -1,1 +1,0 @@
-[32mINFO    [0m api.transaction_api:transaction_api.py:16 Creating transaction: Online Transfer

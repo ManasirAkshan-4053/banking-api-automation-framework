@@ -3,3 +3,33 @@ __pycache__/
 .env
 .vscode/
 node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+venv/
+.env
+
+# Pytest
+.pytest_cache/
+
+# Allure Reports
+allure-results/
+allure-report/
+
+# Playwright
+playwright-report/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

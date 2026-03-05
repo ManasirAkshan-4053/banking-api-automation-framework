@@ -1,4 +1,0 @@
-[32mINFO    [0m api.transaction_api:transaction_api.py:16 Creating transaction: Online Transfer
-[32mINFO    [0m api.transaction_api:transaction_api.py:19 Response Status: 201
-[32mINFO    [0m api.transaction_api:transaction_api.py:26 Fetching transaction ID: b681
-[32mINFO    [0m api.transaction_api:transaction_api.py:29 Response Status: 200
