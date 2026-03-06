@@ -1,223 +1,176 @@
-# 🏦 Banking API Automation Framework
+# 🏦 Banking API & UI Automation Framework
 
 ![API Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/actions/workflows/api-tests.yml/badge.svg)
 
 ![UI Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/actions/workflows/ui-tests.yml/badge.svg)
 
-A professional REST API Automation Framework built using Python and Pytest.
+Enterprise-level **Test Automation Framework** built using **Python, PyTest, Playwright, and GitHub Actions**.
 
-## 🚀 Project Overview
+This project demonstrates modern QA automation practices including:
 
-This project is a professional-grade API Automation Framework built using Python and Pytest, designed to simulate real-world banking transaction workflows.
-
-It validates core banking operations such as:
-
-Account validation
-
-Transaction creation
-
-Balance verification
-
-API response validation
-
-Negative scenario handling
-
-The framework is designed following industry best practices and includes:
-
-Structured test architecture
-
-Mock banking API using json-server
-
-Allure reporting integration
-
-CI/CD pipeline using GitHub Actions
-
-This project demonstrates production-ready automation design aligned with Banking, Cards, ATM, and Payments domain testing.
+* API Automation
+* UI Automation
+* Data-driven testing
+* Faker-based dynamic test data
+* JSON schema validation
+* Response time SLA validation
+* Page Object Model (POM)
+* CI/CD with GitHub Actions
+* Allure reporting
+* Screenshot capture on failure
 
 ---
 
-## 🏗 Architecture
+# Tech Stack
 
-The framework follows a clean layered structure:
-
-Tests Layer
-    ↓
-API Client Layer
-    ↓
-Mock Banking API (json-server)
-
-Key Design Principles
-
-Separation of concerns
-
-Reusable API utility functions
-
-Configurable test execution
-
-Scalable folder structure
-
-CI-ready implementation
+Python 3.11
+PyTest
+Playwright (UI Automation)
+Requests (API Testing)
+Faker (Dynamic Test Data)
+JSONSchema (Response Validation)
+Allure Reports
+GitHub Actions (CI/CD)
 
 ---
 
-## 🛠 Tech Stack
+# Project Structure
 
-| Tool           | Purpose              |
-| -------------- | -------------------- |
-| Python 3.11    | Programming Language |
-| Pytest         | Test Framework       |
-| Requests       | API Interaction      |
-| Allure         | Reporting            |
-| JSON Server    | Mock Banking API     |
-| GitHub Actions | CI/CD                |
-| Git            | Version Control      |
-
+project/
+│
+├── api/
+│   └── transaction_api.py
+│
+├── utils/
+│   ├── validators.py
+│   └── data_factory.py
+│
+├── tests/
+│   └── test_transactions.py
+│
+├── ui_tests/
+│   ├── pages/
+│   │   └── playwright_home_page.py
+│   │
+│   └── test_playwright_home.py
+│
+├── config/
+│   └── dev.json
+│
+├── db.json
+├── pytest.ini
+├── requirements.txt
+│
+└── .github/
+└── workflows/
+├── api-tests.yml
+└── ui-tests.yml
 
 ---
 
-## 📂 Project Structure
+# Features Implemented
 
-api/ → API request layer  
-tests/ → Test cases  
-utils/ → Config, logging, validation utilities  
+API Automation
+
+Create Transaction API testing
+
+JSON Schema validation
+
+Negative testing
+
+Dynamic test data using Faker
+
+Response time SLA validation
+
+UI Automation
+
+Playwright with Python
+
+Page Object Model (POM)
+
+Headed and headless execution
+
+Screenshot capture on failure
+
+CI/CD
+
+Automated pipelines using GitHub Actions
+
+Separate workflows for API and UI tests
+
+Tests automatically run on every push
 
 ---
 
-### ▶️ How To Run
+# Running Tests Locally
 
-### 1️⃣ Clone Repository
+API Tests
 
-git clone https://github.com/ManasirAkshan-4053/banking-api-automation-framework.git
+pytest tests -v
 
-cd banking-api-automation-framework
+Start mock server before running tests:
 
-### 2️⃣ Install Dependencies
+npx json-server --watch db.json --port 3000
 
-pip install -r requirements.txt
+UI Tests
 
-### 3️⃣ Start Mock Banking API
+pytest ui_tests -v
 
-json-server --watch db.json --port 3000
+Run with browser visible:
 
-### 4️⃣ Execute Tests
+pytest ui_tests -v --headed
 
-py -m pytest --alluredir=allure-results
+---
 
-### 5️⃣ Generate Allure Report
+# Allure Reporting
+
+Generate report:
+
+pytest --alluredir=allure-results
+
+Open report:
 
 allure serve allure-results
 
-This opens an interactive HTML report in your browser.
+---
+
+# CI Pipelines
+
+API Tests Pipeline
+
+![API Tests](https://github.com/<username>/ManasirAkshan-4053/banking-api-automation-framework/workflows/api-tests.yml/badge.svg)
+
+UI Tests Pipeline
+
+![UI Tests](https://github.com/<username>/ManasirAkshan-4053/banking-api-automation-framework/workflows/ui-tests.yml/badge.svg)
 
 ---
 
-## ✅ Sample Test Scenario
+# Future Enhancements
 
-✔ Create new banking transaction  
-✔ Validate 201 response  
-✔ Extract dynamic transaction ID  
-✔ Fetch same transaction  
-✔ Validate response data  
+Dockerized test environment
 
----
+Test parallelization
 
-## 📊 Allure Reporting
+Cross-browser testing
 
-The framework integrates Allure Reporting for:
+Integration with TestRail
 
-Detailed test steps
-
-Request/Response visibility
-
-Failure diagnostics
-
-Test categorization (Feature/Story)
-
-Execution timeline
-
-This mirrors reporting standards used in enterprise QA environments.
+Cloud execution using GitHub runners
 
 ---
 
-## 🔄 CI/CD Integration
+# Author
 
-CI pipeline is configured using GitHub Actions.
+Manasir Akshan Ayubkhan, QA Automation Engineer
 
-Triggered On:
+Specialized in:
 
-Push to main
+API Testing
 
-Pull Request creation
+Payments / Banking domain
 
-CI Workflow Includes:
+Automation Framework Design
 
-Code checkout
+CI/CD Test Automation
 
-Python setup
-
-Dependency installation
-
-Automated test execution
-
-This ensures continuous validation and professional DevOps alignment.
-
----
-
-## 📂 Folder Structure
-
-banking-api-automation-framework
-│
-├── api/                      # API client layer
-├── tests/                    # Test cases
-├── utils/                    # Reusable utilities
-├── db.json                   # Mock banking data
-├── pytest.ini                # Pytest configuration
-├── requirements.txt          # Project dependencies
-├── README.md                 # Project documentation
-└── .github/
-    └── workflows/
-        └── ci.yml            # CI pipeline
-
----
-
-## 🚀 Future Enhancements
-
-Planned improvements to elevate this framework further:
-
-Dockerized execution
-
-Environment configuration (DEV / QA / PROD)
-
-Parallel test execution
-
-Logging framework integration
-
-Data-driven testing support
-
-API coverage metrics
-
-Performance testing integration
-
-Authentication token management
-
----
-
-## 💼 Professional Context
-
-This framework reflects hands-on automation design aligned with:
-
-Banking & Payments domain testing
-
-API validation strategies
-
-Enterprise QA best practices
-
-CI/CD integration workflows
-
-It demonstrates capability in transitioning from Manual Testing to Advanced API Automation Engineering.
-
-## 📬 Author
-
-Manasir Akshan Ayubkhan,
-Software Test Engineer | Banking & Payments Domain,
-API Automation | CI/CD | Test Architecture
