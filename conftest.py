@@ -18,3 +18,12 @@ def pytest_runtest_makereport(item, call):
             page.screenshot(path=str(screenshot_file))
 
             print(f"\nScreenshot saved: {screenshot_file}")
+
+            import pytest
+
+@pytest.fixture(scope="function")
+def browser_context_args():
+    return {
+        "record_video_dir": "videos/",
+        "record_video_size": {"width": 1280, "height": 720},
+    }
