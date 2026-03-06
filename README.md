@@ -1,6 +1,6 @@
 # 🏦 Banking API Automation Framework
 
-![API Tests](https://github.com/<your-username>/<repo-name>/actions/workflows/api-tests.yml/badge.svg)
+![API Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/actions/workflows/api-tests.yml/badge.svg)
 
 ![UI Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/actions/workflows/ui-tests.yml/badge.svg)
 
