@@ -1,8 +1,16 @@
 # 🏦 Banking API & UI Automation Framework
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![PyTest](https://img.shields.io/badge/PyTest-Test%20Framework-green)
+![Playwright](https://img.shields.io/badge/Playwright-UI%20Automation-brightgreen)
+
 ![API Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/actions/workflows/api-tests.yml/badge.svg)
 
 ![UI Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/actions/workflows/ui-tests.yml/badge.svg)
+
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Stars](https://img.shields.io/github/stars/ManasirAkshan-4053/banking-api-automation-framework?style=social)
 
 Enterprise-level **Test Automation Framework** built using **Python, PyTest, Playwright, and GitHub Actions**.
 
@@ -138,11 +146,11 @@ allure serve allure-results
 
 API Tests Pipeline
 
-![API Tests](https://github.com/<username>/ManasirAkshan-4053/banking-api-automation-framework/workflows/api-tests.yml/badge.svg)
+![API Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/workflows/api-tests.yml/badge.svg)
 
 UI Tests Pipeline
 
-![UI Tests](https://github.com/<username>/ManasirAkshan-4053/banking-api-automation-framework/workflows/ui-tests.yml/badge.svg)
+![UI Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/workflows/ui-tests.yml/badge.svg)
 
 ---
 
