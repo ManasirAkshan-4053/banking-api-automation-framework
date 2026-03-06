@@ -142,18 +142,6 @@ allure serve allure-results
 
 ---
 
-# CI Pipelines
-
-API Tests Pipeline
-
-![API Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/workflows/api-tests.yml/badge.svg)
-
-UI Tests Pipeline
-
-![UI Tests](https://github.com/ManasirAkshan-4053/banking-api-automation-framework/workflows/ui-tests.yml/badge.svg)
-
----
-
 # Future Enhancements
 
 Dockerized test environment
