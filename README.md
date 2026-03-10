@@ -29,6 +29,14 @@ This project demonstrates modern QA automation practices including:
 
 ---
 
+## AI Testing Strategy
+
+The repository also includes an AI adoption strategy document for banking QA teams.
+
+docs/ai-testing-strategy.md
+
+---
+
 # Tech Stack
 
 Python 3.11
