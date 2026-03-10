@@ -1,29 +1,34 @@
 import pytest
+import allure
 from pathlib import Path
-
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-    outcome = yield
-    rep = outcome.get_result()
 
-    if rep.when == "call" and rep.failed:
-        page = item.funcargs.get("page", None)
+    outcome = yield
+    report = outcome.get_result()
+
+    if report.when == "call" and report.failed:
+
+        page = item.funcargs.get("page")
 
         if page:
-            screenshots_dir = Path("screenshots")
-            screenshots_dir.mkdir(exist_ok=True)
 
-            screenshot_file = screenshots_dir / f"{item.name}.png"
-            page.screenshot(path=str(screenshot_file))
+            screenshot_path = f"screenshots/{item.name}.png"
+            page.screenshot(path=screenshot_path)
 
-            print(f"\nScreenshot saved: {screenshot_file}")
+            allure.attach.file(
+                screenshot_path,
+                name="Failure Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
 
-            import pytest
+            video_dir = Path("videos")
 
-@pytest.fixture(scope="function")
-def browser_context_args():
-    return {
-        "record_video_dir": "videos/",
-        "record_video_size": {"width": 1280, "height": 720},
-    }
+            if video_dir.exists():
+                for video in video_dir.rglob("*.webm"):
+                    allure.attach.file(
+                        str(video),
+                        name="Test Video",
+                        attachment_type=allure.attachment_type.WEBM
+                    )
